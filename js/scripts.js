@@ -13,13 +13,16 @@ var lastToFirst = function(sentence) {
   return sentence.charAt(sentence.length - 1) + sentence.charAt(0);
 }
 
-var firstLastSwitch = function() {
-  var sentence = original();
-  var process1 = firstLast(sentence);
-  var process2 = lastToFirst(process1);
-  alert(sentence + process2);
+var originalSentence;
 
+var firstLastSwitch = function() {
+  var originalSentence = original();
+  var process1 = firstLast(originalSentence);
+  var process2 = lastToFirst(process1);
+  alert(originalSentence + process2);
 }
+
+
 
 
 
