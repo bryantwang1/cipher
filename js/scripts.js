@@ -14,16 +14,22 @@ var lastToFirst = function(sentence) {
 }
 
 var originalSentence;
+var modSentence;
 
 var firstLastSwitch = function() {
-  var originalSentence = original();
+  originalSentence = original();
   var process1 = firstLast(originalSentence);
   var process2 = lastToFirst(process1);
-  alert(originalSentence + process2);
+  modSentence = originalSentence + process2;
+  alert(modSentence);
+}
+
+var encode = function() {
+  var character = originalSentence.charAt(originalSentence.length / 2);
+  return character + modSentence;
 }
 
 
 
-
-
 firstLastSwitch();
+alert(encode());
