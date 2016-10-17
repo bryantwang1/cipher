@@ -3,8 +3,7 @@ var original = function(sentence) {
   return sentence;
 }
 
-var firstLast = function(sentence, firstLetter, lastLetter) {
-  sentence = original();
+var firstLast = function(sentence) {
   firstLetter = sentence.charAt(0).toUpperCase();
   lastLetter = sentence.charAt(sentence.length - 1).toUpperCase();
   return firstLetter + lastLetter;
@@ -15,9 +14,13 @@ var lastToFirst = function(sentence) {
 }
 
 var firstLastSwitch = function() {
-  result = lastToFirst(firstLast());
-  alert(result);
+  var sentence = original();
+  var process1 = firstLast(sentence);
+  var process2 = lastToFirst(process1);
+  alert(sentence + process2);
+
 }
+
 
 
 firstLastSwitch();
